@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { EmpAddEditComponent } from './emp-add-edit/emp-add-edit.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AngularCRUDApp';
+
+  constructor(public dialog: MatDialog) {
+
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(EmpAddEditComponent);
+
+    // dialogRef.afterClosed().subscribe(result => {
+    //   console.log('The dialog was closed');
+    // });
+  }
 }
