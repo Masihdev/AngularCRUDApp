@@ -16,5 +16,30 @@
   "profile": {
     "name": "typicode"
   },
-  "employees": []
+  "employees": [
+    {
+      "firstName": "Masihullah",
+      "lastName": "Massudi",
+      "email": "masihullahmassudi85@gmail.com",
+      "dob": "2023-05-31T22:00:00.000Z",
+      "gender": "male",
+      "education": "Diploma",
+      "company": "google",
+      "experience": 6,
+      "package": 48000,
+      "id": 1
+    },
+    {
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john@gmail.com",
+      "dob": "2023-06-07T22:00:00.000Z",
+      "gender": "male",
+      "education": "Graduate",
+      "company": "Facebook",
+      "experience": 6,
+      "package": 50000,
+      "id": 2
+    }
+  ]
 }
