@@ -18,28 +18,52 @@
   },
   "employees": [
     {
-      "firstName": "Masihullah",
-      "lastName": "Massudi",
-      "email": "masihullahmassudi85@gmail.com",
-      "dob": "2023-05-31T22:00:00.000Z",
-      "gender": "male",
-      "education": "Diploma",
-      "company": "google",
-      "experience": 6,
-      "package": 48000,
-      "id": 1
-    },
-    {
       "firstName": "John",
       "lastName": "Doe",
       "email": "john@gmail.com",
       "dob": "2023-06-07T22:00:00.000Z",
       "gender": "male",
-      "education": "Graduate",
-      "company": "Facebook",
+      "education": "Matric",
+      "company": "Google",
       "experience": 6,
-      "package": 50000,
+      "package": 55000,
+      "id": 1
+    },
+    {
+      "firstName": "Masih",
+      "lastName": "Massudi",
+      "email": "masih@gmail.com",
+      "dob": "2023-05-31T22:00:00.000Z",
+      "gender": "male",
+      "education": "Diploma",
+      "company": "Google",
+      "experience": 6,
+      "package": 55555,
       "id": 2
+    },
+    {
+      "firstName": "Bahar",
+      "lastName": "Massudi",
+      "email": "bahar@gmail.com",
+      "dob": "2023-06-07T22:00:00.000Z",
+      "gender": "female",
+      "education": "Intermediate",
+      "company": "Amazon",
+      "experience": 6,
+      "package": 66666,
+      "id": 3
+    },
+    {
+      "firstName": "testofTest",
+      "lastName": "test1",
+      "email": "test@test.com",
+      "dob": "2023-05-31T22:00:00.000Z",
+      "gender": "other",
+      "education": "Diploma",
+      "company": "test",
+      "experience": 3333,
+      "package": 33333,
+      "id": 4
     }
   ]
 }

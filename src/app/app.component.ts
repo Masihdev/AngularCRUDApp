@@ -32,10 +32,16 @@ export class AppComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(EmpAddEditComponent);
-
-    // dialogRef.afterClosed().subscribe(result => {
-    //   console.log('The dialog was closed');
-    // });
+    dialogRef.afterClosed().subscribe({
+      next: (val) => {
+        if(val) {
+          this.getEmployee();
+        }
+      },
+      error: (err: any) => {
+        console.log(err);
+      }
+    });
   }
 
   getEmployee() {
@@ -65,7 +71,26 @@ export class AppComponent implements OnInit {
   deleteEmployee(id: number) {
     this.empService.deleteEmployee(id).subscribe({
       next: (res: any) => {
-        alert('Employee deleted successfully.');
+        // alert('Employee deleted successfully.');
+        this.getEmployee();
+      },
+      error: (err: any) => {
+        console.log(err);
+      }
+    });
+  }
+
+
+  editEmployee(data: any): void {
+    const dialogRef = this.dialog.open(EmpAddEditComponent, {
+      data: data
+    });
+
+    dialogRef.afterClosed().subscribe({
+      next: (val) => {
+        if (val) {
+          this.getEmployee();
+        }
       },
       error: (err: any) => {
         console.log(err);
