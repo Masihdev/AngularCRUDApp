@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { EmployeeService } from '../services/employee.service';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { CoreService } from '../core/core.service';
 
 @Component({
   selector: 'emp-add-edit',
@@ -15,7 +16,8 @@ export class EmpAddEditComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, 
               private empService: EmployeeService,
               private matDialogRef: MatDialogRef<EmpAddEditComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: any) {
+              @Inject(MAT_DIALOG_DATA) public data: any,
+              private coreService: CoreService) {
     this.empForm = this.formBuilder.group({
       firstName: '',
       lastName: '',
@@ -40,7 +42,8 @@ export class EmpAddEditComponent implements OnInit {
       if (this.data) {
         this.empService.updateEmployee(this.data.id, this.empForm.value).subscribe({
           next: (val: any) => {
-            alert('Employee detail updated.');
+            // alert('Employee detail updated.');
+            this.coreService.openSnackBar('Employee detail updated.');
             this.matDialogRef.close(true);
           },
 
@@ -52,6 +55,7 @@ export class EmpAddEditComponent implements OnInit {
         this.empService.addEmployee(this.empForm.value).subscribe({
           next: (val: any) => {
             // alert('A new employee added successfully.');
+            this.coreService.openSnackBar('A new employee added successfully.');
             this.matDialogRef.close(true);
           },
 

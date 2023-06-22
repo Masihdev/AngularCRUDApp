@@ -43,7 +43,7 @@
     },
     {
       "firstName": "Bahar",
-      "lastName": "Massudi",
+      "lastName": "Massudijan",
       "email": "bahar@gmail.com",
       "dob": "2023-06-07T22:00:00.000Z",
       "gender": "female",
@@ -52,18 +52,6 @@
       "experience": 6,
       "package": 66666,
       "id": 3
-    },
-    {
-      "firstName": "testofTest",
-      "lastName": "test1",
-      "email": "test@test.com",
-      "dob": "2023-05-31T22:00:00.000Z",
-      "gender": "other",
-      "education": "Diploma",
-      "company": "test",
-      "experience": 3333,
-      "package": 33333,
-      "id": 4
     }
   ]
 }

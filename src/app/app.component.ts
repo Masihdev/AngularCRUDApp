@@ -7,6 +7,7 @@ import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { CoreService } from './core/core.service';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +23,8 @@ export class AppComponent implements OnInit {
   @ViewChild(MatSort) sort!: MatSort;
 
   constructor(public dialog: MatDialog,
-              private empService: EmployeeService) {
+              private empService: EmployeeService,
+              private coreService: CoreService) {
 
   }
 
@@ -72,6 +74,7 @@ export class AppComponent implements OnInit {
     this.empService.deleteEmployee(id).subscribe({
       next: (res: any) => {
         // alert('Employee deleted successfully.');
+        this.coreService.openSnackBar('Employee deleted successfully.', 'done');
         this.getEmployee();
       },
       error: (err: any) => {
